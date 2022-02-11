@@ -14,7 +14,7 @@ public class password_check
       
       System.out.print("Enter the Password: ");
       String password = in.nextLine();
-      String passtrim=password.trim();
+      String passtrim=password.trim();  //trims spaces if any
       int ttl = passtrim.length();
       if(ttl<passLength)
       {
@@ -26,21 +26,21 @@ public class password_check
          for(int i=0; i<ttl; i++)
          {
             ch = passtrim.charAt(i);
-            if(Character.isUpperCase(ch))
+            if(Character.isUpperCase(ch)) //checks for upper case characters
             {
                upChar = 1;
             }
-            else if(Character.isLowerCase(ch))
+            else if(Character.isLowerCase(ch)) //checks for lower case character
             {
                lowChar = 1;
             }
-            else if(Character.isDigit(ch))
+            else if(Character.isDigit(ch)) //checks for any digit
             {
                num = 1;
             }
             else
             {
-               spec = 1;
+               spec = 1; // special character counter increases by 1
             }
          }
       }
